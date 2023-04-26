@@ -1,11 +1,11 @@
 ## Tính năng
 
-- Top 100 Quotes hay nhất (tôi tự chọn)
+- Thay vì thêm tất cả các câu vào database thì mình sẽ chọn lọc những cái hay nhất và thêm vào
 - Hiển thị các tác giả và câu nói hay của họ - OK
 - Hiển thị các chủ đề và câu nói theo chủ đề - OK
 - Hiển thị người theo nghề nghiệp - OK
-- Tìm kiếm
-- Đề xuất (những cái hay và tinh túy nhất sẽ đặt ở trang home)
+- Tìm kiếm - OK
+- Random quotes - ok
 
 ## Cre : https://www.brainyquote.com/
 
