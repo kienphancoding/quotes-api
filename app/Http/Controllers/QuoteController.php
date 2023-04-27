@@ -14,8 +14,14 @@ class QuoteController extends Controller
         $quote = Quote::take($request->count)->skip(($request->page - 1) * $request->count)->get();
 
         foreach ($quote as $item) {
+            $item["author"] = Author::find($item->author_id);
+            unset($item["author"]["updated_at"]);
+            unset($item["author"]["created_at"]);
+            unset($item["author"]["profession_id"]);
+            
             unset($item["updated_at"]);
             unset($item["created_at"]);
+            unset($item["topic_id"]);
         }
 
         return response()->json($quote, 200)->header('Content-Type', 'application/json');

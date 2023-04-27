@@ -16,8 +16,6 @@ class AuthorController extends Controller
             unset($item["updated_at"]);
             unset($item["created_at"]);
             unset($item["profession_id"]);
-            unset($item["image_link"]);
-            unset($item["description"]);
         }
         return response()->json($author, 200)->header('Content-Type', 'application/json');
     }
