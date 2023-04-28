@@ -42,8 +42,8 @@ Route::prefix('quote')->group(function () {
     Route::get('/topic/{path}', [QuoteController::class, "topic"]);
     Route::get('/search', [QuoteController::class, "search"]);
     Route::get('/random', [QuoteController::class, "random"]);
-    Route::get('/{id}', [AuthorController::class, "show"]);
-    Route::post('/', [AuthorController::class, "create"]);
-    Route::put('/{id}', [AuthorController::class, "update"]);
-    Route::delete('/{id}', [AuthorController::class, "delete"]);
+    Route::get('/{id}', [QuoteController::class, "show"]);
+    Route::post('/', [QuoteController::class, "create"]);
+    Route::put('/{id}', [QuoteController::class, "update"]);
+    Route::delete('/{id}', [QuoteController::class, "delete"]);
 });

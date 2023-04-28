@@ -11,9 +11,11 @@ class QuoteController extends Controller
 {
     public function index(Request $request)
     {
-        $quote = Quote::take($request->count)->skip(($request->page - 1) * $request->count)->get();
+        $quote=[];
+        $quote["count"] = Quote::all()->count();
+        $quote["quotes"] = Quote::take($request->count)->skip(($request->page - 1) * $request->count)->get();
 
-        foreach ($quote as $item) {
+        foreach ($quote["quotes"] as $item) {
             $item["author"] = Author::find($item->author_id);
             unset($item["author"]["updated_at"]);
             unset($item["author"]["created_at"]);
